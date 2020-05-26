@@ -11,9 +11,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return  MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.blueGrey,
+        backgroundColor: Colors.teal,
         body: SafeArea(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               CircleAvatar(
                 radius: 50.0,
@@ -38,62 +39,54 @@ class MyApp extends StatelessWidget {
                     ),
 
               ),
-              Container(
-                padding: EdgeInsets.all(10.0
+              SizedBox(
+                height: 20.0,
+                child: Divider(
+                  color: Colors.teal.shade100,
+
                 ),
+
+              ),
+              Card(
                 margin: EdgeInsets.symmetric(vertical: 10.0,horizontal: 25.0
                 ),
                 color: Colors.white,
-                child: Row(
-                  children: <Widget>[
-                    Icon(
-                      Icons.phone,
-                      color: Colors.teal.shade500,
+                child: ListTile(
+                  leading: Icon(
+                    Icons.phone,
+                    color: Colors.teal.shade500,
+                  ),
+                  title: Text("518-645-0241",
+                    style: TextStyle(
+                        color: Colors.teal.shade500,
+                        fontFamily: 'SourceSansPro',
+                        fontSize: 20.0,
+
                     ),
-                    SizedBox( width: 10.0,
-                    ),
+                  ),
 
 
-                    Text("518-645-0241",
-                         style: TextStyle(
-                           color: Colors.teal,
-                           fontFamily: 'SourceSansPro',
-                           fontSize: 20.0
-
-                         ),
-                    )
-
-                  ],
                 ),
 
 
               ),
-              Container(
-                padding: EdgeInsets.all(10.0
-                ),
+              Card(
                 margin: EdgeInsets.symmetric(vertical: 10.0,horizontal: 25.0
                 ),
                 color: Colors.white,
-                child: Row(
-                  children: <Widget>[
-                    Icon(
-                      Icons.email,
-                      color: Colors.teal.shade500,
+                child: ListTile(
+                 leading:Icon(
+                   Icons.email,
+                   color: Colors.teal.shade500,
+                 ),
+                  title: Text("iosmobilebrian@gmail.com",
+                    style: TextStyle(
+                        color: Colors.teal.shade500,
+                        fontFamily: 'SourceSansPro',
+                        fontSize: 20.0
+
                     ),
-                    SizedBox( width: 10.0,
-                    ),
-
-
-                    Text("iosmobilebrian@gmail.com",
-                      style: TextStyle(
-                          color: Colors.teal,
-                          fontFamily: 'SourceSansPro',
-                          fontSize: 20.0
-
-                      ),
-                    )
-
-                  ],
+                  ),
                 ),
 
 
@@ -111,4 +104,6 @@ class MyApp extends StatelessWidget {
   }
 
 }
+
+
 
